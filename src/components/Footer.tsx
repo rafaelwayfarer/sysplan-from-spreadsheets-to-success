@@ -14,7 +14,10 @@ export const Footer = () => {
         >
           <img src={logo} alt="Sysplan" className="h-10 mb-6" />
           
-          
+          <p className="text-2xl md:text-3xl font-black text-white mb-4">
+            Get it Done. Get it Fun.
+          </p>
+
           <p className="text-sm text-muted-foreground mb-6">
             Desenvolvendo sistemas sob medida desde 1983.
           </p>
