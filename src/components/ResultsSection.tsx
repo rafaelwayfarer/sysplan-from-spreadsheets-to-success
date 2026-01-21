@@ -1,14 +1,11 @@
 import { motion } from "framer-motion";
 
 // Import client logos
-import client1 from "@/assets/clients/client-1.png";
-import client2 from "@/assets/clients/client-2.png";
-import client3 from "@/assets/clients/client-3.png";
-import client4 from "@/assets/clients/client-4.png";
-import client5 from "@/assets/clients/client-5.png";
-import client6 from "@/assets/clients/client-6.png";
-import client7 from "@/assets/clients/client-7.png";
-import client8 from "@/assets/clients/client-8.png";
+import cory from "@/assets/clients/cory.png";
+import drogacenter from "@/assets/clients/drogacenter.png";
+import feelFilmes from "@/assets/clients/feel-filmes.png";
+import abbot from "@/assets/clients/abbot.png";
+import zombie from "@/assets/clients/zombie.png";
 
 const stats = [
   { number: "40+", label: "Anos desenvolvendo sistemas sob medida" },
@@ -16,7 +13,7 @@ const stats = [
   { number: "80%", label: "Redução de tempo em operações manuais" },
 ];
 
-const clientLogos = [client1, client2, client3, client4, client5, client6, client7, client8];
+const clientLogos = [cory, drogacenter, feelFilmes, abbot, zombie];
 
 export const ResultsSection = () => {
   return (
@@ -31,7 +28,7 @@ export const ResultsSection = () => {
         >
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              📈 Resultados
+              Resultados
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               40 anos, mais de 500 clientes e até{" "}
@@ -84,7 +81,7 @@ export const ResultsSection = () => {
             <p className="text-center text-sm text-muted-foreground mb-8">
               Empresas que confiam na Sysplan
             </p>
-            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 items-center">
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-6 items-center">
               {clientLogos.map((logo, index) => (
                 <motion.div
                   key={index}
