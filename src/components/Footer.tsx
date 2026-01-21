@@ -14,9 +14,6 @@ export const Footer = () => {
         >
           <img src={logo} alt="Sysplan" className="h-10 mb-6" />
           
-          <p className="text-2xl md:text-3xl font-black gradient-text mb-4">
-            Get it done. Get it fun.
-          </p>
           
           <p className="text-sm text-muted-foreground mb-6">
             Desenvolvendo sistemas sob medida desde 1983.
@@ -24,7 +21,7 @@ export const Footer = () => {
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
             <a 
-              href="https://www.linkedin.com/company/sysplan/" 
+              href="https://www.linkedin.com/company/sysplan-hub-criativo" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"

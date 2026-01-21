@@ -49,7 +49,7 @@ export const MethodologySection = () => {
         >
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              ⚙️ Metodologia
+              Metodologia
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Como transformamos sua planilha em sistema

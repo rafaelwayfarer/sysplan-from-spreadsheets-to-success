@@ -62,7 +62,7 @@ export const ContactSection = () => {
         >
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              📩 Contato
+              Contato
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Vamos tirar sua operação da planilha?

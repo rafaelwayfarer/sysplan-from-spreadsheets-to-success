@@ -45,7 +45,7 @@ export const SolutionSection = () => {
         >
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              💡 A Solução
+              A Solução
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Do caos da planilha ao sistema que{" "}
