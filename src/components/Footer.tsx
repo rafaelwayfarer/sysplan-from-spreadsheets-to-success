@@ -19,7 +19,7 @@ export const Footer = () => {
           </p>
 
           <p className="text-sm text-muted-foreground mb-6">
-            Desenvolvendo sistemas sob medida desde 1983.
+            Acelerando empresas desde 1983.
           </p>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
