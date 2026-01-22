@@ -74,7 +74,7 @@ export const PainSection = () => {
             <p className="text-lg text-muted-foreground">
               Nós sabemos: <span className="text-foreground font-medium">a planilha já salvou muita operação.</span>
               <br />
-              Mas sua empresa não precisa virar refém dela.
+              Mas sua empresa <span className="font-bold">não precisa virar refém</span> dela.
             </p>
           </motion.div>
         </motion.div>
