@@ -52,7 +52,7 @@ export const SolutionSection = () => {
               <span className="gradient-text">trabalha por você.</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A Sysplan desenvolve sistemas sob medida para empresas médias e grandes que cresceram demais para continuar reféns de planilhas.
+              A Sysplan desenvolve sistemas sob medida para médias e grandes empresas que cresceram demais para continuar reféns de planilhas.
             </p>
           </div>
 
