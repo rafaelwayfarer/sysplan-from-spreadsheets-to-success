@@ -48,10 +48,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-24 relative">
-      {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
-      
+    <section id="contato" className="py-24 relative section-light">
       <div className="section-container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
