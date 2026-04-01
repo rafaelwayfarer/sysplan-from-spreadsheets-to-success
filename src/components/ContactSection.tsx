@@ -59,13 +59,13 @@ export const ContactSection = () => {
         >
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              Contato
+              Próximo Passo
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Vamos tirar sua operação da planilha?
+              Descubra em 30 minutos quanto sua planilha está te custando
             </h2>
             <p className="text-lg text-muted-foreground">
-              Preencha os dados abaixo e vamos marcar uma conversa sem compromisso para entender sua rotina e mostrar caminhos possíveis.
+              Uma conversa sem compromisso com um especialista Sysplan. Você sai com diagnóstico real, independente de fechar negócio.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export const ContactSection = () => {
               className="w-full"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Enviando..." : "Quero falar com a Sysplan"}
+              {isSubmitting ? "Enviando..." : "Quero minha avaliação gratuita"}
               <Send className="w-5 h-5" />
             </Button>
           </motion.form>

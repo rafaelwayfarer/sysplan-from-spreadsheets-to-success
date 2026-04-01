@@ -1,26 +1,30 @@
 import { motion } from "framer-motion";
-import { Code, Palette, Link, Cloud } from "lucide-react";
+import { ShieldCheck, Layers, Ban, RefreshCw, TrendingUp, Shuffle } from "lucide-react";
 
-const differentiators = [
+const riskItems = [
   {
-    icon: Code,
-    title: "Sistemas sob medida",
-    description: "Desenvolvemos do zero, exatamente para sua necessidade",
+    icon: ShieldCheck,
+    text: "Se não enxergarmos ganho operacional, não seguimos o projeto",
   },
   {
-    icon: Palette,
-    title: "UX e gamificação",
-    description: "Interfaces que engajam o usuário e facilitam a adoção",
+    icon: Layers,
+    text: "O projeto é dividido por etapas",
   },
   {
-    icon: Link,
-    title: "Integrações e automações",
-    description: "Conectamos com ERPs, CRMs e sistemas que você já usa",
+    icon: Ban,
+    text: "Não existe contrato de permanência mínima",
   },
   {
-    icon: Cloud,
-    title: "Cloud e microsserviços",
-    description: "Arquitetura escalável para acompanhar seu crescimento",
+    icon: RefreshCw,
+    text: "Você fica enquanto fizer sentido para sua empresa",
+  },
+  {
+    icon: TrendingUp,
+    text: "O sistema evolui continuamente",
+  },
+  {
+    icon: Shuffle,
+    text: "Você não precisa trocar toda sua operação de uma vez",
   },
 ];
 
@@ -40,49 +44,28 @@ export const WhyUsSection = () => {
               Diferenciais
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Conte com a Sysplan
+              Isso é o que fazemos para reduzir seu{" "}
+              <span className="gradient-text">risco a zero</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Cada projeto nasce de uma dor específica, mas nosso stack permite construir soluções completas:
-            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {differentiators.map((item, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {riskItems.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card rounded-xl p-6 text-center hover:border-primary/30 transition-all hover:-translate-y-1"
+                className="glass-card rounded-xl p-6 flex items-start gap-4 hover:border-primary/30 transition-all hover:-translate-y-1"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <p className="text-foreground font-medium pt-2">{item.text}</p>
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="gradient-border p-8 text-center"
-          >
-            <p className="text-lg text-muted-foreground mb-2">
-              Nosso foco é simples:
-            </p>
-            <p className="text-xl font-semibold text-foreground mb-4">
-              Entregar o que precisa ser feito, de um jeito leve, intuitivo e gostoso de usar.
-            </p>
-            <p className="text-2xl md:text-3xl font-black gradient-text">
-              Get it done. Get it fun.
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
