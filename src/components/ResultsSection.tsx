@@ -93,8 +93,6 @@ export const ResultsSection = () => {
           </div>
         </div>
       </motion.div>
-        </motion.div>
-      </div>
     </section>
   );
 };
