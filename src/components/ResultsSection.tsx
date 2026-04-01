@@ -57,35 +57,42 @@ export const ResultsSection = () => {
             ))}
           </div>
 
-          {/* Client logos */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <p className="text-center text-sm text-muted-foreground mb-8">
-              Empresas que confiam na Sysplan
-            </p>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-6 items-center">
-              {clientLogos.map((logo, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center justify-center p-2 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
-                >
-                  <img 
-                    src={logo} 
-                    alt={`Cliente ${index + 1}`} 
-                    className="max-h-12 w-auto object-contain"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Client logos - light background */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-16 py-14 rounded-2xl"
+        style={{ backgroundColor: "hsl(0, 0%, 97%)" }}
+      >
+        <div className="section-container">
+          <p className="text-center text-sm font-medium mb-10" style={{ color: "hsl(270, 10%, 45%)" }}>
+            Empresas que confiam na Sysplan
+          </p>
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-8 items-center max-w-4xl mx-auto">
+            {clientLogos.map((logo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="flex items-center justify-center p-3 hover:scale-110 transition-transform duration-300"
+              >
+                <img 
+                  src={logo} 
+                  alt={`Cliente ${index + 1}`} 
+                  className="max-h-14 w-auto object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
         </motion.div>
       </div>
     </section>
