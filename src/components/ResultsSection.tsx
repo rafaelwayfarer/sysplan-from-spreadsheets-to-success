@@ -8,9 +8,9 @@ import abbot from "@/assets/clients/abbot.png";
 import zombie from "@/assets/clients/zombie.png";
 
 const stats = [
-  { number: "40+", label: "Anos desenvolvendo sistemas sob medida" },
-  { number: "500+", label: "Clientes atendidos ao longo da história" },
-  { number: "80%", label: "Redução de tempo em operações manuais" },
+  { number: "80%", label: "Redução de horas manuais por semana" },
+  { number: "500+", label: "Empresas atendidas em 40+ anos" },
+  { number: "Zero", label: "Retrabalho por erro de planilha" },
 ];
 
 const clientLogos = [cory, drogacenter, feelFilmes, abbot, zombie];
@@ -31,26 +31,12 @@ export const ResultsSection = () => {
               Resultados
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              40 anos, mais de 500 clientes e até{" "}
-              <span className="gradient-text">80% de ganho operacional.</span>
+              O que nossos clientes conquistam
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A Sysplan é uma das pioneiras entre as software houses no Brasil. Desde 1983, já atendemos mais de 500 empresas em diferentes setores, sempre com foco em resolver problemas reais de operação.
+            <p className="text-xl text-muted-foreground">
+              Menos tempo operando. <span className="text-foreground font-semibold">Mais tempo crescendo.</span>
             </p>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card rounded-2xl p-6 mb-12"
-          >
-            <p className="text-center text-muted-foreground">
-              Somos os criadores do <span className="text-foreground font-semibold">LaborLIS</span>, um dos sistemas mais utilizados por laboratórios de análises clínicas no país{" "}
-              <span className="text-muted-foreground/70">(solução posteriormente adquirida pela healthtech Proradis)</span>.
-            </p>
-          </motion.div>
 
           {/* Stats */}
           <div className="grid sm:grid-cols-3 gap-6 mb-16">

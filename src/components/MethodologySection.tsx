@@ -6,26 +6,26 @@ const steps = [
   {
     number: "01",
     icon: FileSearch,
-    title: "Briefing & Diagnóstico",
-    description: "Entendemos suas planilhas, rotinas, dores e objetivos. Mapeamos os fluxos entre áreas e o que realmente precisa ser automatizado.",
+    title: "Briefing & diagnóstico (gratuito)",
+    description: "Mapeamos suas planilhas, rotinas e dores. Você sai com clareza sobre o que automatizar e qual seria o ganho real.",
   },
   {
     number: "02",
     icon: Lightbulb,
-    title: "Discovery & Arquitetura",
-    description: "Nosso time de UX, sistema e integrações desenha a solução ideal: telas, fluxos, integrações, regras de negócio e relatórios.",
+    title: "Discovery & arquitetura",
+    description: "UX, sistema e integrações desenhados sob medida. Você aprova antes de uma linha de código ser escrita.",
   },
   {
     number: "03",
     icon: Rocket,
-    title: "MVP sob medida",
-    description: "Construímos um MVP funcional, já focado no coração da operação, para você testar e validar com o time.",
+    title: "MVP funcional",
+    description: "O coração da operação rodando em sistema. Você testa, valida com o time e tem resultados reais antes de expandir.",
   },
   {
     number: "04",
     icon: TrendingUp,
     title: "Evolução contínua",
-    description: "A partir do MVP, seguimos com melhorias, novas rotinas, dashboards e integrações — sem reinventar o que já funciona.",
+    description: "Novas rotinas, dashboards e integrações conforme você cresce — sem precisar recomeçar do zero.",
   },
 ];
 
@@ -46,13 +46,13 @@ export const MethodologySection = () => {
         >
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              Metodologia
+              Como Funciona
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Como transformamos sua planilha em sistema
+              Do diagnóstico ao sistema rodando
             </h2>
             <p className="text-lg text-muted-foreground">
-              (sem travar sua operação)
+              — sem travar sua operação
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export const MethodologySection = () => {
             className="text-center"
           >
             <Button variant="hero" size="lg" onClick={scrollToContact}>
-              Quero avaliar minha operação com a Sysplan
+              Quero avaliar minha operação
               <ArrowRight className="w-5 h-5" />
             </Button>
           </motion.div>

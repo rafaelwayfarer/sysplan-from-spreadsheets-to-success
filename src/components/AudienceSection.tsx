@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { FileSpreadsheet, Puzzle, Layers, RefreshCw, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
-const audiences = [
-  "Têm processos críticos rodando em Excel/Google Sheets",
-  "Já testaram softwares de prateleira (SaaS) que não se encaixam 100% na rotina",
-  "Precisam integrar dados entre vários setores, unidades ou sistemas",
-  "Estão em fase de crescimento ou transformação digital, mas não conseguem escalar na base da planilha",
+const inclusions = [
+  "Diagnóstico da operação",
+  "Mapeamento de processos",
+  "Estruturação de dados",
+  "Arquitetura do sistema",
+  "Desenvolvimento do sistema",
+  "Integrações com outros sistemas",
+  "Dashboards e indicadores",
+  "Implantação assistida",
+  "Treinamento da equipe",
+  "Manutenção do sistema",
+  "Melhorias contínuas todos os meses",
 ];
 
 export const AudienceSection = () => {
@@ -21,30 +28,45 @@ export const AudienceSection = () => {
         >
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              Para Quem É
+              O que está incluído
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Ideal para empresas que:
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Quando você contrata a Sysplan, você também recebe:
             </h2>
           </div>
 
-          <div className="grid gap-4">
-            {audiences.map((item, index) => (
+          <div className="grid sm:grid-cols-2 gap-4 mb-12">
+            {inclusions.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card rounded-xl p-6 flex items-center gap-4 hover:border-primary/30 transition-colors"
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="glass-card rounded-xl p-5 flex items-center gap-4 hover:border-primary/30 transition-colors"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
-                  <Check className="w-5 h-5 text-primary-foreground" />
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                  <Check className="w-4 h-4 text-primary-foreground" />
                 </div>
-                <p className="text-lg text-foreground">{item}</p>
+                <p className="text-foreground">{item}</p>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="gradient-border p-8 text-center"
+          >
+            <p className="text-lg text-muted-foreground mb-2">
+              Seu sistema não fica parado. <span className="text-foreground font-medium">Todos os meses ele evolui.</span>
+            </p>
+            <p className="text-muted-foreground">
+              A maioria dos softwares fica obsoleta. O seu melhora com o tempo.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

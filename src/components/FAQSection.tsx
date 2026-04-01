@@ -8,20 +8,24 @@ import {
 
 const faqs = [
   {
-    question: "Vou precisar parar a operação para trocar a planilha pelo sistema?",
-    answer: "Não. O projeto é estruturado justamente para construir o sistema em paralelo, testar com uma área piloto e só depois migrar 100%. Com segurança, treinamento e acompanhamento.",
+    question: "Este tipo de serviço é pra minha empresa?",
+    answer: "Esse projeto é ideal para empresas que controlam operações em planilhas, têm muitos controles manuais, precisam integrar sistemas, têm operação complexa ou querem escalar a operação.",
   },
   {
-    question: "Meus times são muito diferentes entre si. Dá pra atender todos?",
-    answer: "Sim. A vantagem de um sistema sob medida é justamente respeitar a rotina de cada área, mas mantendo um núcleo único de informações para gestão e tomada de decisão.",
+    question: "Precisarei parar a operação durante a migração?",
+    answer: "Não. Construímos o sistema em paralelo com sua operação atual. A virada é planejada para ser gradual e com o menor impacto no dia a dia.",
   },
   {
-    question: "E se eu já tiver outros sistemas rodando?",
-    answer: "Integração é uma das nossas especialidades. Em vez de criar \"mais uma ilha de informação\", a Sysplan trabalha para conectar o novo sistema ao que você já utiliza (ERPs, CRMs, plataformas legado etc.).",
+    question: "Já tentei SaaS e não se encaixou na minha rotina. Por que seria diferente?",
+    answer: "Porque não existe um SaaS chamado \"Sysplan\". Construímos do zero, a partir do seu processo — não o contrário.",
   },
   {
-    question: "Quanto tempo leva para ter algo funcionando?",
-    answer: "Depende da complexidade, mas nossa abordagem por MVP permite que você tenha uma primeira versão útil em semanas, não em anos. Depois seguimos evoluindo em ciclos ágeis.",
+    question: "Em quanto tempo terei algo funcionando?",
+    answer: "Depende da complexidade, mas o MVP costuma estar rodando entre 6 e 12 semanas. Você valida antes de expandir.",
+  },
+  {
+    question: "Já tenho outros sistemas rodando. Dá pra integrar?",
+    answer: "Sim. Integrações são parte do nosso core: ERPs, CRMs, sistemas legados. Você não precisa jogar nada fora.",
   },
 ];
 
@@ -38,10 +42,10 @@ export const FAQSection = () => {
         >
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              FAQ
+              Dúvidas Comuns
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Perguntas que podem estar passando pela sua cabeça
+              O que costuma passar pela cabeça antes de falar com a gente
             </h2>
           </div>
 

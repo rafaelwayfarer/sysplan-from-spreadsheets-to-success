@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-import { Clock, AlertTriangle, Eye, Shield } from "lucide-react";
+import { Bug, Copy, Clock, Users } from "lucide-react";
 
 const painPoints = [
   {
+    icon: Bug,
+    text: "Alguém \"quebrou\" uma fórmula e levou 2 dias para descobrir. O relatório estava errado e ninguém sabia.",
+  },
+  {
+    icon: Copy,
+    text: "Você tem 3 versões da mesma planilha no e-mail e não sabe qual é a atual.",
+  },
+  {
     icon: Clock,
-    text: "Horas perdidas atualizando e conferindo informações",
+    text: "Para fechar o mês, alguém precisa ficar 2 dias consolidando dados de áreas diferentes.",
   },
   {
-    icon: AlertTriangle,
-    text: "Erros humanos que viram retrabalho, atraso e desconfiança nos dados",
-  },
-  {
-    icon: Eye,
-    text: "Dificuldade de ter uma visão consolidada entre áreas, unidades ou filiais",
-  },
-  {
-    icon: Shield,
-    text: "Medo de \"quebrar\" a planilha ou perder histórico quando alguém mexe onde não devia",
+    icon: Users,
+    text: "Seu time cresceu, mas a planilha não escala — e você contratou mais gente para cuidar dela, não do negócio.",
   },
 ];
 
@@ -36,13 +36,13 @@ export const PainSection = () => {
               O Problema
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Planilha não é sistema.{" "}
+              Você não tem um problema de tecnologia.{" "}
               <span className="text-muted-foreground">
-                E você está pagando essa conta todos os dias.
+                Você tem um problema de crescimento.
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Se a operação da sua empresa ainda roda em planilhas gigantes, provavelmente você vive isso na rotina:
+              Sua empresa cresceu, e as planilhas que um dia salvaram sua operação agora estão te custando dinheiro todos os dias. Reconhece alguma dessas situações?
             </p>
           </div>
 
@@ -63,20 +63,6 @@ export const PainSection = () => {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="gradient-border p-8 text-center"
-          >
-            <p className="text-lg text-muted-foreground">
-              Nós sabemos: <span className="text-foreground font-medium">a planilha já salvou muita operação.</span>
-              <br />
-               Mas sua empresa <span className="text-foreground font-medium">não precisa virar refém</span> dela.
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>

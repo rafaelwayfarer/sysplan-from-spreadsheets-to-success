@@ -1,27 +1,37 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Clock, ShieldCheck, Workflow, Sparkles, ArrowRight } from "lucide-react";
+import { Workflow, Rocket, Search, Palette, TrendingUp, Link, ShieldCheck, ArrowRight } from "lucide-react";
 
-const benefits = [
-  {
-    icon: Clock,
-    title: "80% menos tempo",
-    description: "Redução do tempo gasto preenchendo e conferindo planilhas",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Menos erros",
-    description: "Muito menos erros humanos e retrabalho na operação",
-  },
+const deliverables = [
   {
     icon: Workflow,
-    title: "Segurança",
-    description: "Segurança e rastreabilidade das informações",
+    title: "Sistema sob medida para o seu processo",
+    description: "Construído a partir das suas planilhas reais, não de um template genérico. Seus fluxos, suas regras, suas integrações.",
   },
   {
-    icon: Sparkles,
-    title: "Sob medida",
-    description: "Fluxos pensados para o seu jeito de operar, não o contrário",
+    icon: Rocket,
+    title: "MVP em semanas, não em meses",
+    description: "Você valida o sistema funcionando no coração da operação antes de expandir. Sem risco de pagar por algo que não serve.",
+  },
+  {
+    icon: Search,
+    title: "Diagnóstico gratuito da sua operação",
+    description: "Antes de qualquer contrato, nosso time mapeia suas planilhas, rotinas e gargalos — e te mostra onde pode estar o desperdício.",
+  },
+  {
+    icon: Palette,
+    title: "UX pensado para adoção do time",
+    description: "Interfaces que o time quer usar, não que o time é obrigado a usar. Reduz resistência e acelera o ROI.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Evolução contínua pós-lançamento",
+    description: "Seu negócio muda, seu sistema também muda. Não cobramos para \"refazer tudo\" — evoluímos o que já funciona.",
+  },
+  {
+    icon: Link,
+    title: "Integração com os sistemas que você já usa",
+    description: "ERP, CRM, sistemas legados — conectamos tudo. Não precisa jogar fora o que já funciona.",
   },
 ];
 
@@ -45,45 +55,51 @@ export const SolutionSection = () => {
               A Solução
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Do caos da planilha ao sistema que{" "}
-              <span className="gradient-text">trabalha por você.</span>
+              O que você recebe ao trabalhar com a{" "}
+              <span className="gradient-text">Sysplan</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A Sysplan desenvolve sistemas sob medida para médias e grandes empresas que cresceram demais para continuar reféns de planilhas.
+              Não vendemos um software. Entregamos a operação funcionando.
             </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card rounded-2xl p-8 mb-12"
-          >
-            <p className="text-lg text-center text-muted-foreground">
-              Em vez de forçar um SaaS genérico na sua rotina, nós construímos o sistema{" "}
-              <span className="text-foreground font-medium">a partir do seu processo real</span>, entre áreas, departamentos e terceiros.
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {benefits.map((benefit, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {deliverables.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="gradient-border p-6 text-center hover:scale-105 transition-transform"
+                className="gradient-border p-6 hover:scale-105 transition-transform"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             ))}
           </div>
+
+          {/* SLA / Guarantee */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="glass-card rounded-2xl p-8 mb-12 flex items-start gap-4"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <ShieldCheck className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">SLA contratual, sem letra miúda</h3>
+              <p className="text-muted-foreground">
+                Cada entrega tem prazo e critérios de aceite definidos em contrato. Se não atender, trabalhamos até atender.
+              </p>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -93,12 +109,9 @@ export const SolutionSection = () => {
             className="text-center"
           >
             <Button variant="cta" size="lg" onClick={scrollToContact}>
-              Agende uma conversa
+              Quero avaliar minha operação
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <p className="text-sm text-muted-foreground mt-3">
-              Veja como tirar sua operação da planilha
-            </p>
           </motion.div>
         </motion.div>
       </div>

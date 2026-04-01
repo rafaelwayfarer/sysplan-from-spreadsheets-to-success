@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -21,11 +21,23 @@ export const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-6">
+              Para médias e grandes empresas
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-2">
+              Sua operação vai crescer.
+            </h1>
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6">
-              Sua operação é grande demais pra viver em uma{" "}
-              <span className="gradient-text">planilha.</span>
+              Suas planilhas <span className="gradient-text">não vão aguentar.</span>
             </h1>
           </motion.div>
 
@@ -33,26 +45,43 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8"
           >
-            Sistemas sob medida que substituem planilhas pesadas, reduzem até{" "}
-            <span className="text-primary font-semibold">80% do tempo gasto</span> e trazem segurança aos seus dados.
+            A Sysplan transforma processos críticos que rodam em Excel em sistemas sob medida em até{" "}
+            <span className="text-primary font-semibold">6 semanas</span> e garante que sua operação escale sem contratar mais gente para controlar planilha.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col items-center gap-3 mb-10"
+          >
+            {[
+              "Sem trocar seu processo.",
+              "Sem ERP engessado.",
+              "Sem contrato de permanência.",
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2 text-muted-foreground">
+                <Check className="w-4 h-4 text-primary" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col items-center gap-3"
           >
             <Button variant="hero" size="xl" onClick={scrollToContact}>
-              Quero sair das planilhas
+              Quero avaliar minha operação
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="lg" onClick={scrollToContact}>
-              <MessageCircle className="w-5 h-5" />
-              Fale com um especialista Sysplan
-            </Button>
+            <p className="text-sm text-muted-foreground">
+              Sem compromisso. Em 30 minutos você sabe se faz sentido.
+            </p>
           </motion.div>
 
           <motion.div
